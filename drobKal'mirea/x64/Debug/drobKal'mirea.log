@@ -1,0 +1,7 @@
+﻿  drobKal'mirea.cpp
+C:\Users\arsen\source\repos\drobKal'mirea\drobKal'mirea\drobKal'mirea.cpp(73,42): warning C4244: аргумент: преобразование "double" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+  drobKal'mirea.vcxproj -> C:\Users\arsen\source\repos\drobKal'mirea\x64\Debug\drobKal'mirea.exe
