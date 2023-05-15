@@ -1,0 +1,97 @@
+#include <iostream>
+#include <cmath>
+#include "figure.class"
+
+Figure::Figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4) {
+    this->x1 = x1;
+    this->x2 = x2;
+    this->x3 = x3;
+    this->x4 = x4;
+    this->y1 = y1;
+    this->y2 = y2;
+    this->y3 = y3;
+    this->y4 = y4;
+
+    float ab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    float bc = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    float cd = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+    float da = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+
+    P = ab + bc + cd + da;
+
+    float s = P/2;
+
+    S = sqrt((s - ab) * (s - bc) * (s - cd) * (s - da));
+}
+
+void Figure::show() {
+    std::cout << "Coordinates: (" << x1 << "," << y1 << ") (" << x2 << "," << y2 << ") (" << x3 << "," << y3 << ") (" << x4 << "," << y4 << ")" << std::endl;
+    std::cout << "Perimeter: " << P << std::endl;
+    std::cout << "Area: " << S << std::endl;
+}
+
+bool Figure::is_Prug() {
+    float ab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    float bc = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    float cd = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+    float da = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+    if ((ab == cd && bc == da) || (ab == bc && cd == da) || (ab == da && bc == cd)) {
+        return true;
+    }
+    return false;
+}
+
+
+bool Figure::is_Square() {
+    float ab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    float bc = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    float cd = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+    float da = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+
+    return (ab == cd && cd == bc && bc == da);
+}
+
+bool Figure::is_Romb() {
+    float ab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    float bc = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    float cd = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+    float da = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+    float diag1 = sqrt(pow(x2 - x4, 2) + pow(y2 - y4, 2));
+    float diag2 = sqrt(pow(x1 - x3, 2) + pow(y1 - y3, 2));
+    if (ab == bc && bc == cd && cd == da) {
+        if (diag1 ==diag2) {
+            return true;
+        }
+    }
+
+    return false;
+}
+bool Figure::is_In_Circle() {
+    float ab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    float bc = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    float cd = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+    float da = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+
+    double radius = (ab * bc * cd * da) / (4 * S);
+
+    if (radius >= (sqrt(2) * std::max({ab, bc, cd, da})) / 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+bool Figure::is_Out_Circle() {
+
+    float ab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    float bc = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+    float cd = sqrt(pow(x4 - x3, 2) + pow(y4 - y3, 2));
+    float da = sqrt(pow(x1 - x4, 2) + pow(y1 - y4, 2));
+
+    double radius = (ab * bc * cd * da) / (4 * S);
+
+    if (radius <= (std::min({ab, bc, cd, da})) / 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
