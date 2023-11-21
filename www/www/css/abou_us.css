@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500&family=Roboto+Condensed&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    margin: auto auto;
+}
+/*  */
+
+
+/* header */
+
+/*  */
+.header-block{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo-header{
+    margin-left: 10px;
+    
+}
+nav.navigation-header{
+    display: block;
+    margin-top: 95px;
+
+}
+ul.navigation-items{
+    display: flex;
+    list-style: none;
+}
+li.navigation-item{
+    margin-right: 10px;
+    
+}
+li.navigation-item-img{
+    margin-right: 30px;
+    padding: 7.33px 12px;
+}
+a.navigation-btn{
+    text-decoration: none;
+    color: white;
+    padding: 7.33px 12px;
+    
+}
+img.navigation-image{
+    margin-top: -12px;
+}
+
+#burgerIcon{
+    display: none;
+        
+}
+
+a:hover.navigation-btn{
+    border-radius: 15px;
+    background-color: #E87467;
+}
+li:hover.navigation-item-img{
+    border-radius: 15px;
+    background-color:  #0070FF;
+}
+
+.header-psn{
+    background-image: url('../img/backround-heder.png');
+    background-size: cover;
+    position: relative;
+}
+
+
+h1.header-about-us{
+    padding-top: 22px;
+    text-align: center;
+    
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 188.52%;
+    color: #EAFFF5;
+}
+p.description-about-us{
+    margin: 0 auto;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 188.52%;
+    text-align: center;
+    color: #EAFFF5;
+
+    padding-bottom: 50px;
+}
+.block-about-us{
+    padding: 20px;
+}
+section.about-us{
+    background-image: url('../img/Rectangle 9.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1000px) {
+    nav.navigation-header{
+        display: none;
+    }
+    nav.navigation-header.show-menu {
+        display: block; 
+        position: fixed;
+        width: 100vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(98, 97, 97, 0.579);
+        padding: 20px;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+
+    }
+
+    ul.navigation-items{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    li.navigation-item{
+        margin-right: 0px;
+        margin-top: 25px;
+        padding: 7.33px 12px;
+        
+    }
+    li.navigation-item-img{
+        margin-top: 25px;
+        padding: 7.33px 12px;
+        margin-right: -1px;
+    }
+    a.navigation-btn{
+        text-decoration: none;
+        color: white;
+        padding: 7.33px 12px;
+        
+    }
+    img.navigation-image{
+        margin-top: -12px;
+    }
+
+    #burgerIcon{
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color:aliceblue;
+        border-radius: 50%;
+        color: #5849FF;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+    
+        position: absolute;
+        top: 77px;
+        right: 13px;
+    }
+
+    li:hover.navigation-item-img{
+        border-radius: 0px;
+        background-color:  transparent;
+    }
+
+    section.about-us{
+        background-image: url('../img/Rectangle 9.png');
+        background-size: cover;
+        height: 100vh;
+    }
+    
+}

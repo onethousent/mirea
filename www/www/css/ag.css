@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500&family=Roboto+Condensed&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 
+
+header
+
+*/
+
+
+.header-psn{
+    background-image: url('../img/backround-heder.png');
+    background-size: cover;
+}
+.header-block{
+    display: flex;
+}
+.logo-header{
+    width: 282px;
+    height: 170.57px;
+    margin-left: 133px;
+    margin-top: 23px;
+}
+.navigation-header{
+    width: 804px;
+    height: 55.51px;
+    margin-left: 137px;
+    margin-top: 91.85px;
+    margin-right: 133px;
+}
+ul.navigation-items{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+li.navigation-item{
+    margin-right: 27px;
+}
+li.navigation-item-img{
+    padding: 7.33px 12px;
+    margin-right: 45px;
+}
+li.navigation-item-img:last-child{
+    margin-right: 0px;
+}
+a.navigation-btn{
+    text-decoration: none;
+    color: #ECFFE8;
+    padding:  7.33px 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+}
+a:hover.navigation-btn{
+    border-radius: 15px;
+    background-color: #E87467;
+}
+li:hover.navigation-item-img{
+    border-radius: 15px;
+    background-color:  #0070FF;
+}
+
+.block-agents{
+    background-image: url('../img/Rectangle\ 36.png');
+    background-size: cover;
+
+    padding-top: 33px;
+    padding-left: 133px;
+
+    width: 1393px;
+    height: 508.72px;
+}
+.top-block-agents{
+    display: flex;
+}
+.header-agents{
+    width: 472px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 161.02%;
+    color: #E6F7F0;
+
+    padding-right: 118px;
+}
+.line-agents{
+    height: 185.36px;
+    border-right: 3px solid #DCF2EE;
+
+    margin-top: 27px;
+}
+p.description-agents{
+    width: 542px;
+    margin-top: 21px;
+    margin-left: 71px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 161.02%;
+    color: #E6F7F0;
+}
+.description-block-agents{
+    margin-top: 37.09px;
+    width: 1182px;
+    height: 223.64px;
+
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+p.description-agents-bottom{
+    padding-top: 12.9px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 161.02%;
+    color: #E6F7F0;
+}
